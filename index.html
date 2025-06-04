@@ -130,7 +130,10 @@
                     contours.delete();
                     im_gray.delete();
                     threshold_im.delete();
-                    pts.convertTo(pts, cv.CV_32FC2);
+
+                    if(pts) {
+                        pts.convertTo(pts, cv.CV_32FC2);
+                    }
 
                     return pts;
 
